@@ -7,7 +7,7 @@ var bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({extended: true}));
 
 var mongoose = require('mongoose');
-mongoose.connect("mongodb://nicklobosco:Serenity-99@ds127993.mlab.com:27993/news-app-");
+mongoose.connect("mongodb://user:password@ds127993.mlab.com:27993/news-app-");
 var userSchema = new mongoose.Schema({
     username: String,
     password: String,
