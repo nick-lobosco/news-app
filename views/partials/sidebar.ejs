@@ -1,0 +1,17 @@
+<div class="col-sm-3">
+            <div class="affix" style="padding-top: 100px">
+                <div class= col-sm-12>
+                    <% categories.forEach(function(category){ %>
+                        <div class="dropdown">
+                            <button style="background: #606266; color: white;" class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown"><%=category['category']%>
+                            <span class="caret"></span></button>
+                            <ul style="background: #606266; color: white;" class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="menu1">
+                                <% category['sources'].forEach(function(source){ %>
+                                    <li role="presentation"><a style="color: white;"role="menuitem" tabindex="-1" href="/sources/<%= source['id'] %>"> <%=source['name']%> </a></li>
+                                <% }); %>
+                            </ul>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+        </div>

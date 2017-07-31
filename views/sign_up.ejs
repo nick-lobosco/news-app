@@ -1,0 +1,12 @@
+<% include partials/header %>
+<% include partials/nav_top %>
+    <form action="/new_user" method="post" style="height: 100%; width: 200px; margin: auto; padding-top: 15%; text-align: center;">
+        <h1 style="color: white;">Sign Up</h1>
+        <% if(showErr){ %>
+            <p style="color: red;">Username taken</p>
+        <% } %>
+        <input style="margin: 3px;" type="text" placeholder="UserName" name="username">
+        <input style="margin: 3px;" type="password" placeholder="Password" name="password">
+        <input style="margin: 3px;" type="submit">
+    </form>
+<% include partials/footer %>

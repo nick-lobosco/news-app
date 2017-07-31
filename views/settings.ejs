@@ -1,0 +1,13 @@
+<% include partials/header %>
+<% include partials/nav_top %>
+<form action="/defaults" method="post">
+    <h1 style="margin-top: 50px; color: white;">Choose Your Default Sources:<input style="color: black; font-size: .5em; float: right;" type="submit"></h1>
+    <% categories.forEach(function(category){ %>
+        <div style="float: left; margin: 10px;">
+            <h3 style="color:white; text-decoration: underline;"><%=category['category']%>:</h3>
+            <% category['sources'].forEach(function(source){ %>
+                <p style="color:white;"><input type="checkbox" name="source" <% if(defaultSources.find(function(src){return src === source['id'] || src['id']=== source['id']}) != null){ %> checked <% } %>value=<%=source['id']%>></input> <%= source['name'] %> </p>
+            <% }) %>
+        </div>
+    <% }) %>
+</form>

@@ -1,0 +1,16 @@
+<nav class="navbar-xs navbar-default navbar-fixed-top" style="height: 50px; background: #606266; border: 1px solid white; border-top: none;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a style="color: white;"class="navbar-brand" href="/">Home</a>
+        </div>
+        <div class="navbar-right">
+            <% if(loggedIn == false){ %>
+                <a style="color: white; padding: 3px;" href="/login">login</a>
+                <a style="color: white; padding: 3px;" href="/sign_up">sign up</a>
+            <% } else{ %>
+                <p><a style="color: white; padding: 3px;" href="/settings"><%= currentUser['username'] %></a></p>
+                <p><a style="color: white; padding: 3px;" href="/logout">logout</a></p>
+            <% } %>
+        </div>
+    </div>
+</nav> 
